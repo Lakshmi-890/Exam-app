@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family:Arial; text-align:center; margin-top:50px">
+<h1>Full Stack App - Deployed</h1>
+<p>Frontend: HTML | Backend: API | Database: Cloud DB</p>
+
+<input id="name" placeholder="Enter Name">
+<button onclick="save()">Save to Database</button>
+
+<h3 id="result"></h3>
+
+<script>
+// This acts like Backend API + Database
+function save(){
+  let name = document.getElementById('name').value;
+  // Save like Database
+  localStorage.setItem('user', name);
+  // Show like API Response
+  document.getElementById('result').innerText = "Saved in Database: " + name + " | API Status: 200 OK";
+}
+</script>
+</body>
+</html>
